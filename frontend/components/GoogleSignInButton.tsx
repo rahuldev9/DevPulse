@@ -6,7 +6,7 @@ export default function GoogleSignInButton() {
   const router = useRouter();
 
   const handleLogin = () => {
-    window.location.href = `${process.env.NEXT_PUBLIC_BACKEND_API}/auth/google}`;
+    window.location.href = `${process.env.NEXT_PUBLIC_BACKEND_API}/auth/google`;
   };
 
   return (
