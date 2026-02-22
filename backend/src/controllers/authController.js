@@ -27,90 +27,90 @@ exports.register = async (req, res) => {
     });
 
     // 4️⃣ Login URL
-    const loginUrl = `${process.env.CLIENT_URL}/login`;
+    // const loginUrl = `${process.env.CLIENT_URL}/login`;
 
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
+    // const transporter = nodemailer.createTransport({
+    //   service: "gmail",
+    //   auth: {
+    //     user: process.env.EMAIL_USER,
+    //     pass: process.env.EMAIL_PASS,
+    //   },
+    // });
 
-    // 5️⃣ Send Welcome Email
-    const info = await transporter.sendMail({
-      from: `"DevPlue Support" <${process.env.EMAIL_USER}>`,
-      to: email,
-      subject: "Welcome to DevPlue 🎉",
-      html: `
-      <!DOCTYPE html>
-      <html>
-      <body style="margin:0;padding:0;background:#f4f6fb;font-family:Arial;">
-        <table width="100%" cellpadding="0" cellspacing="0" style="padding:40px 0;">
-          <tr>
-            <td align="center">
-              <table width="600" cellpadding="0" cellspacing="0"
-                style="background:#ffffff;border-radius:12px;overflow:hidden;">
+    // // 5️⃣ Send Welcome Email
+    // const info = await transporter.sendMail({
+    //   from: `"DevPlue Support" <${process.env.EMAIL_USER}>`,
+    //   to: email,
+    //   subject: "Welcome to DevPlue 🎉",
+    //   html: `
+    //   <!DOCTYPE html>
+    //   <html>
+    //   <body style="margin:0;padding:0;background:#f4f6fb;font-family:Arial;">
+    //     <table width="100%" cellpadding="0" cellspacing="0" style="padding:40px 0;">
+    //       <tr>
+    //         <td align="center">
+    //           <table width="600" cellpadding="0" cellspacing="0"
+    //             style="background:#ffffff;border-radius:12px;overflow:hidden;">
                 
-                <tr>
-                  <td align="center"
-                    style="background:linear-gradient(135deg,#f97316,#2563eb);padding:35px;">
-                    <h1 style="color:#ffffff;margin:0;">
-                      Welcome to DevPlue 🚀
-                    </h1>
-                  </td>
-                </tr>
+    //             <tr>
+    //               <td align="center"
+    //                 style="background:linear-gradient(135deg,#f97316,#2563eb);padding:35px;">
+    //                 <h1 style="color:#ffffff;margin:0;">
+    //                   Welcome to DevPlue 🚀
+    //                 </h1>
+    //               </td>
+    //             </tr>
 
-                <tr>
-                  <td style="padding:40px 35px;">
-                    <h2>Hello ${name} 👋</h2>
-                    <p style="font-size:15px;line-height:1.6;">
-                      Your account has been successfully created.
-                      You can now log in and start exploring DevPlue.
-                    </p>
+    //             <tr>
+    //               <td style="padding:40px 35px;">
+    //                 <h2>Hello ${name} 👋</h2>
+    //                 <p style="font-size:15px;line-height:1.6;">
+    //                   Your account has been successfully created.
+    //                   You can now log in and start exploring DevPlue.
+    //                 </p>
 
-                    <div style="text-align:center;margin:30px 0;">
-                      <a href="${loginUrl}"
-                        style="display:inline-block;padding:14px 28px;
-                        background:linear-gradient(135deg,#f97316,#2563eb);
-                        color:#ffffff;text-decoration:none;border-radius:8px;
-                        font-weight:bold;">
-                        Login to Your Account
-                      </a>
-                    </div>
+    //                 <div style="text-align:center;margin:30px 0;">
+    //                   <a href="${loginUrl}"
+    //                     style="display:inline-block;padding:14px 28px;
+    //                     background:linear-gradient(135deg,#f97316,#2563eb);
+    //                     color:#ffffff;text-decoration:none;border-radius:8px;
+    //                     font-weight:bold;">
+    //                     Login to Your Account
+    //                   </a>
+    //                 </div>
 
-                    <p style="font-size:13px;color:#6b7280;">
-                      If you did not create this account, please contact support.
-                    </p>
-                  </td>
-                </tr>
+    //                 <p style="font-size:13px;color:#6b7280;">
+    //                   If you did not create this account, please contact support.
+    //                 </p>
+    //               </td>
+    //             </tr>
 
-                <tr>
-                  <td align="center" style="background:#f9fafb;padding:20px;">
-                    <p style="font-size:12px;color:#6b7280;margin:0;">
-                      © ${new Date().getFullYear()} DevPlue.
-                      All rights reserved.
-                    </p>
-                  </td>
-                </tr>
+    //             <tr>
+    //               <td align="center" style="background:#f9fafb;padding:20px;">
+    //                 <p style="font-size:12px;color:#6b7280;margin:0;">
+    //                   © ${new Date().getFullYear()} DevPlue.
+    //                   All rights reserved.
+    //                 </p>
+    //               </td>
+    //             </tr>
 
-              </table>
-            </td>
-          </tr>
-        </table>
-      </body>
-      </html>
-      `,
-    });
+    //           </table>
+    //         </td>
+    //       </tr>
+    //     </table>
+    //   </body>
+    //   </html>
+    //   `,
+    // });
 
-    // 6️⃣ Rollback if email fails
-    if (!info.accepted || info.accepted.length === 0) {
-      await User.findByIdAndDelete(user._id);
-      return res.status(400).json({ message: "Email not deliverable" });
-    }
+    // // 6️⃣ Rollback if email fails
+    // if (!info.accepted || info.accepted.length === 0) {
+    //   await User.findByIdAndDelete(user._id);
+    //   return res.status(400).json({ message: "Email not deliverable" });
+    // }
 
     return res.status(201).json({
-      message: "User registered successfully. Email sent.",
+      message: "User registered successfully.",
     });
   } catch (err) {
     return res.status(500).json({
@@ -513,3 +513,4 @@ exports.setPassword = async (req, res) => {
     });
   }
 };
+
