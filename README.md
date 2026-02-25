@@ -39,13 +39,13 @@ Write code directly inside the browser.
 
 Supported Languages
 
-# 🐍 Python
+🐍 Python
 
-# ☕ Java
+☕ Java
 
-# ⚡ C++
+⚡ C++
 
-# 🟨 JavaScript
+🟨 JavaScript
 
 Editor Capabilities
 
@@ -239,9 +239,9 @@ Submit a Pull Request
 
 If you like this project:
 
-# ⭐ Star the repository
-# 🍴 Fork the project
-# 🚀 Share with developers
+⭐ Star the repository
+🍴 Fork the project
+🚀 Share with developers
 
 # 👨‍💻 Author
 
