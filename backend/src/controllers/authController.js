@@ -263,11 +263,12 @@ exports.googleLogin = async (req, res) => {
     });
 
     res.cookie("token", token, {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
-      maxAge: 7 * 24 * 60 * 60 * 1000,
-    });
+  httpOnly: true,
+  secure: true,        // required for SameSite=None
+  sameSite: "none",    // ✅ allow cross-site cookie
+  path: "/",
+  maxAge: 24 * 60 * 60 * 1000,
+});
 
     return res.redirect(`${process.env.CLIENT_URL}/dashboard`);
   } catch (error) {
@@ -330,6 +331,7 @@ exports.setPassword = async (req, res) => {
     });
   }
 };
+
 
 
 
