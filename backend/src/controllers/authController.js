@@ -12,13 +12,13 @@ const fs = require("fs");
 // =============================
 // MAIL TRANSPORTER
 // =============================
-const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
-  },
-});
+// const transporter = nodemailer.createTransport({
+//   service: "gmail",
+//   auth: {
+//     user: process.env.EMAIL_USER,
+//     pass: process.env.EMAIL_PASS,
+//   },
+// });
 
 // =============================
 // REGISTER
@@ -49,121 +49,121 @@ exports.register = async (req, res) => {
       provider: "local",
     });
 
-    const loginUrl = `${process.env.CLIENT_URL}/login`;
+//     const loginUrl = `${process.env.CLIENT_URL}/login`;
 
-    // 4️⃣ Mail Transport
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
+//     // 4️⃣ Mail Transport
+//     const transporter = nodemailer.createTransport({
+//       service: "gmail",
+//       auth: {
+//         user: process.env.EMAIL_USER,
+//         pass: process.env.EMAIL_PASS,
+//       },
+//     });
 
-    // 5️⃣ Send Welcome Email (Same Design)
-    const info = await transporter.sendMail({
-      from: `"DevPlue Support" <${process.env.EMAIL_USER}>`,
-      to: email,
-      subject: "Welcome to DevPlue 🎉",
-      html: `
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8" />
-</head>
+//     // 5️⃣ Send Welcome Email (Same Design)
+//     const info = await transporter.sendMail({
+//       from: `"DevPlue Support" <${process.env.EMAIL_USER}>`,
+//       to: email,
+//       subject: "Welcome to DevPlue 🎉",
+//       html: `
+// <!DOCTYPE html>
+// <html>
+// <head>
+// <meta charset="UTF-8" />
+// </head>
 
-<body style="margin:0;padding:0;background:#f4f6fb;font-family:Arial, Helvetica, sans-serif;">
+// <body style="margin:0;padding:0;background:#f4f6fb;font-family:Arial, Helvetica, sans-serif;">
 
-<table width="100%" cellpadding="0" cellspacing="0" style="padding:40px 0;">
-<tr>
-<td align="center">
+// <table width="100%" cellpadding="0" cellspacing="0" style="padding:40px 0;">
+// <tr>
+// <td align="center">
 
-<table width="600" cellpadding="0" cellspacing="0"
-style="background:#ffffff;border-radius:12px;overflow:hidden;
-box-shadow:0 10px 30px rgba(0,0,0,0.05);">
+// <table width="600" cellpadding="0" cellspacing="0"
+// style="background:#ffffff;border-radius:12px;overflow:hidden;
+// box-shadow:0 10px 30px rgba(0,0,0,0.05);">
 
-<!-- HEADER -->
-<tr>
-<td align="center"
-style="background:linear-gradient(135deg,#f97316,#2563eb);padding:35px;">
-  <h1 style="color:#ffffff;margin:0;font-size:22px;font-weight:700;">
-    Welcome to DevPlue 🚀
-  </h1>
-</td>
-</tr>
+// <!-- HEADER -->
+// <tr>
+// <td align="center"
+// style="background:linear-gradient(135deg,#f97316,#2563eb);padding:35px;">
+//   <h1 style="color:#ffffff;margin:0;font-size:22px;font-weight:700;">
+//     Welcome to DevPlue 🚀
+//   </h1>
+// </td>
+// </tr>
 
-<!-- CONTENT -->
-<tr>
-<td style="padding:40px 35px;">
-  <h2 style="margin-top:0;color:#111827;">
-    Hello ${name} 👋
-  </h2>
+// <!-- CONTENT -->
+// <tr>
+// <td style="padding:40px 35px;">
+//   <h2 style="margin-top:0;color:#111827;">
+//     Hello ${name} 👋
+//   </h2>
 
-  <p style="color:#374151;font-size:15px;line-height:1.6;">
-    Your account has been successfully created.
-  </p>
+//   <p style="color:#374151;font-size:15px;line-height:1.6;">
+//     Your account has been successfully created.
+//   </p>
 
-  <p style="color:#374151;font-size:15px;line-height:1.6;">
-    You can now log in and start exploring DevPlue.
-  </p>
+//   <p style="color:#374151;font-size:15px;line-height:1.6;">
+//     You can now log in and start exploring DevPlue.
+//   </p>
 
-  <table width="100%" cellpadding="0" cellspacing="0" style="margin:30px 0;">
-    <tr>
-      <td align="center">
-        <a href="${loginUrl}"
-          style="
-            display:inline-block;
-            padding:14px 28px;
-            font-size:16px;
-            color:#ffffff;
-            background:linear-gradient(135deg,#f97316,#2563eb);
-            text-decoration:none;
-            border-radius:8px;
-            font-weight:bold;
-          ">
-          Login to Your Account
-        </a>
-      </td>
-    </tr>
-  </table>
+//   <table width="100%" cellpadding="0" cellspacing="0" style="margin:30px 0;">
+//     <tr>
+//       <td align="center">
+//         <a href="${loginUrl}"
+//           style="
+//             display:inline-block;
+//             padding:14px 28px;
+//             font-size:16px;
+//             color:#ffffff;
+//             background:linear-gradient(135deg,#f97316,#2563eb);
+//             text-decoration:none;
+//             border-radius:8px;
+//             font-weight:bold;
+//           ">
+//           Login to Your Account
+//         </a>
+//       </td>
+//     </tr>
+//   </table>
 
-  <p style="color:#6b7280;font-size:13px;">
-    If you did not create this account, please contact support.
-  </p>
-</td>
-</tr>
+//   <p style="color:#6b7280;font-size:13px;">
+//     If you did not create this account, please contact support.
+//   </p>
+// </td>
+// </tr>
 
-<!-- FOOTER -->
-<tr>
-<td align="center" style="background:#f9fafb;padding:20px;">
-  <p style="margin:0;font-size:12px;color:#6b7280;">
-    © ${new Date().getFullYear()} DevPlue. All rights reserved.
-  </p>
-</td>
-</tr>
+// <!-- FOOTER -->
+// <tr>
+// <td align="center" style="background:#f9fafb;padding:20px;">
+//   <p style="margin:0;font-size:12px;color:#6b7280;">
+//     © ${new Date().getFullYear()} DevPlue. All rights reserved.
+//   </p>
+// </td>
+// </tr>
 
-</table>
+// </table>
 
-</td>
-</tr>
-</table>
+// </td>
+// </tr>
+// </table>
 
-</body>
-</html>
-`,
-    });
+// </body>
+// </html>
+// `,
+//     });
 
-    // 6️⃣ Rollback if email fails
-    if (!info.accepted || info.accepted.length === 0) {
-      await User.findByIdAndDelete(user._id);
+//     // 6️⃣ Rollback if email fails
+//     if (!info.accepted || info.accepted.length === 0) {
+//       await User.findByIdAndDelete(user._id);
 
-      return res.status(400).json({
-        message: "Email not deliverable",
-      });
-    }
+//       return res.status(400).json({
+//         message: "Email not deliverable",
+//       });
+//     }
 
     res.status(201).json({
-      message: "User registered successfully. Email sent.",
+      message: "User registered successfully.",
     });
   } catch (err) {
     res.status(500).json({
@@ -519,108 +519,108 @@ exports.googleLogin = async (req, res) => {
     }
 
     // 2️⃣ Send Welcome Email (Same Design)
-    if (isNewUser) {
-      const transporter = nodemailer.createTransport({
-        service: "gmail",
-        auth: {
-          user: process.env.EMAIL_USER,
-          pass: process.env.EMAIL_PASS,
-        },
-      });
+//     if (isNewUser) {
+//       const transporter = nodemailer.createTransport({
+//         service: "gmail",
+//         auth: {
+//           user: process.env.EMAIL_USER,
+//           pass: process.env.EMAIL_PASS,
+//         },
+//       });
 
-      await transporter.sendMail({
-        from: `"DevPlue Support" <${process.env.EMAIL_USER}>`,
-        to: email,
-        subject: "Welcome to DevPlue 🎉",
-        html: `
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8" />
-</head>
+//       await transporter.sendMail({
+//         from: `"DevPlue Support" <${process.env.EMAIL_USER}>`,
+//         to: email,
+//         subject: "Welcome to DevPlue 🎉",
+//         html: `
+// <!DOCTYPE html>
+// <html>
+// <head>
+// <meta charset="UTF-8" />
+// </head>
 
-<body style="margin:0;padding:0;background:#f4f6fb;font-family:Arial, Helvetica, sans-serif;">
+// <body style="margin:0;padding:0;background:#f4f6fb;font-family:Arial, Helvetica, sans-serif;">
 
-<table width="100%" cellpadding="0" cellspacing="0" style="padding:40px 0;">
-<tr>
-<td align="center">
+// <table width="100%" cellpadding="0" cellspacing="0" style="padding:40px 0;">
+// <tr>
+// <td align="center">
 
-<table width="600" cellpadding="0" cellspacing="0"
-style="background:#ffffff;border-radius:12px;overflow:hidden;
-box-shadow:0 10px 30px rgba(0,0,0,0.05);">
+// <table width="600" cellpadding="0" cellspacing="0"
+// style="background:#ffffff;border-radius:12px;overflow:hidden;
+// box-shadow:0 10px 30px rgba(0,0,0,0.05);">
 
-<!-- HEADER -->
-<tr>
-<td align="center"
-style="background:linear-gradient(135deg,#f97316,#2563eb);padding:35px;">
-  <h1 style="color:#ffffff;margin:0;font-size:22px;font-weight:700;">
-    Welcome to DevPlue 🚀
-  </h1>
-</td>
-</tr>
+// <!-- HEADER -->
+// <tr>
+// <td align="center"
+// style="background:linear-gradient(135deg,#f97316,#2563eb);padding:35px;">
+//   <h1 style="color:#ffffff;margin:0;font-size:22px;font-weight:700;">
+//     Welcome to DevPlue 🚀
+//   </h1>
+// </td>
+// </tr>
 
-<!-- CONTENT -->
-<tr>
-<td style="padding:40px 35px;">
-  <h2 style="margin-top:0;color:#111827;">
-    Hello ${name} 👋
-  </h2>
+// <!-- CONTENT -->
+// <tr>
+// <td style="padding:40px 35px;">
+//   <h2 style="margin-top:0;color:#111827;">
+//     Hello ${name} 👋
+//   </h2>
 
-  <p style="color:#374151;font-size:15px;line-height:1.6;">
-    Your account has been successfully created using 
-    <strong>Google Sign-In</strong>.
-  </p>
+//   <p style="color:#374151;font-size:15px;line-height:1.6;">
+//     Your account has been successfully created using 
+//     <strong>Google Sign-In</strong>.
+//   </p>
 
-  <p style="color:#374151;font-size:15px;line-height:1.6;">
-    You can now access your dashboard and start exploring DevPlue.
-  </p>
+//   <p style="color:#374151;font-size:15px;line-height:1.6;">
+//     You can now access your dashboard and start exploring DevPlue.
+//   </p>
 
-  <table width="100%" cellpadding="0" cellspacing="0" style="margin:30px 0;">
-    <tr>
-      <td align="center">
-        <a href="${process.env.CLIENT_URL}/dashboard"
-          style="
-            display:inline-block;
-            padding:14px 28px;
-            font-size:16px;
-            color:#ffffff;
-            background:linear-gradient(135deg,#f97316,#2563eb);
-            text-decoration:none;
-            border-radius:8px;
-            font-weight:bold;
-          ">
-          Go to Dashboard
-        </a>
-      </td>
-    </tr>
-  </table>
+//   <table width="100%" cellpadding="0" cellspacing="0" style="margin:30px 0;">
+//     <tr>
+//       <td align="center">
+//         <a href="${process.env.CLIENT_URL}/dashboard"
+//           style="
+//             display:inline-block;
+//             padding:14px 28px;
+//             font-size:16px;
+//             color:#ffffff;
+//             background:linear-gradient(135deg,#f97316,#2563eb);
+//             text-decoration:none;
+//             border-radius:8px;
+//             font-weight:bold;
+//           ">
+//           Go to Dashboard
+//         </a>
+//       </td>
+//     </tr>
+//   </table>
 
-  <p style="color:#6b7280;font-size:13px;">
-    If you did not sign up using Google, please contact support immediately.
-  </p>
-</td>
-</tr>
+//   <p style="color:#6b7280;font-size:13px;">
+//     If you did not sign up using Google, please contact support immediately.
+//   </p>
+// </td>
+// </tr>
 
-<!-- FOOTER -->
-<tr>
-<td align="center" style="background:#f9fafb;padding:20px;">
-  <p style="margin:0;font-size:12px;color:#6b7280;">
-    © ${new Date().getFullYear()} DevPlue. All rights reserved.
-  </p>
-</td>
-</tr>
+// <!-- FOOTER -->
+// <tr>
+// <td align="center" style="background:#f9fafb;padding:20px;">
+//   <p style="margin:0;font-size:12px;color:#6b7280;">
+//     © ${new Date().getFullYear()} DevPlue. All rights reserved.
+//   </p>
+// </td>
+// </tr>
 
-</table>
+// </table>
 
-</td>
-</tr>
-</table>
+// </td>
+// </tr>
+// </table>
 
-</body>
-</html>
-`,
-      });
-    }
+// </body>
+// </html>
+// `,
+//       });
+//     }
 
     // 3️⃣ Generate JWT
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
@@ -642,3 +642,4 @@ style="background:linear-gradient(135deg,#f97316,#2563eb);padding:35px;">
     return res.redirect(`${process.env.CLIENT_URL}/login`);
   }
 };
+
