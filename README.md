@@ -1,27 +1,25 @@
-🚀 DevPulse — Developer Activity & Coding Platform
+# 🚀 DevPulse
 
-DevPulse is a full-stack developer platform built using Next.js and Node.js that allows developers to write, manage, submit, and analyze code across multiple programming languages.
+DevPulse is a full-stack developer platform that allows users to write, manage, submit, and analyze code across multiple programming languages while competing through a live leaderboard system.
 
-It combines coding practice, analytics, and competition into a single modern dashboard experience.
+# 📌 Overview
 
-🌐 Live Concept
+DevPulse is designed to help developers:
 
-Practice coding • Track performance • Compete globally • Improve consistently
+Practice coding online
 
-📌 Overview
+Track development activity
 
-DevPulse helps developers monitor their coding journey through:
+Analyze performance
 
-✅ Secure authentication
-✅ Online multi-language code editor
-✅ Submission tracking
-✅ Performance analytics
-✅ Competitive leaderboard
+Manage projects
 
-After logging in, users can write code, save projects, submit solutions, and climb the leaderboard based on activity.
+Compete with other developers
 
-✨ Core Features
-🔐 Authentication & Authorization
+After authentication, users can write code, save projects, submit solutions, and improve their ranking through submission activity.
+
+## ✨ Features
+# 🔐 Authentication & Authorization
 
 Secure user registration & login
 
@@ -35,75 +33,76 @@ Account management
 
 Secure session handling
 
-💻 Online Code Editor
+# 💻 Online Code Editor
 
-Browser-based coding environment
+Write code directly inside the browser.
 
-Multiple language support:
+Supported Languages
 
-🐍 Python
-☕ Java
-⚡ C++
-🟨 JavaScript
+# 🐍 Python
 
-Features:
+# ☕ Java
 
-Save snippets
+# ⚡ C++
 
-Edit projects
+# 🟨 JavaScript
+
+Editor Capabilities
+
+Save code snippets
+
+Edit existing projects
 
 Delete saved code
 
 Persistent cloud storage
 
-📤 Code Submission System
+# 📤 Code Submission System
 
-Submit coding solutions instantly
+Submit coding solutions
 
 Automatic submission tracking
 
-Submission history
+Submission history management
 
 Stored execution records
 
-Activity-based metrics
+Activity monitoring
 
-🏆 Competitive Leaderboard
+# 🏆 Leaderboard System
 
-Ranked by total submissions
+Ranking based on total submissions
 
-Real-time ranking updates
+Real-time leaderboard updates
 
-Competitive developer ecosystem
+Competitive coding environment
 
-Motivation-driven coding
+# 📊 Dashboard & Analytics
 
-📊 Dashboard & Analytics
-
-Interactive developer insights:
+Interactive developer dashboard including:
 
 Total submissions
 
-Saved projects stats
+Saved code statistics
 
-Coding activity tracking
+Coding activity overview
 
-Performance analytics
+Performance insights
 
-Submission trends
+Submission analytics
 
-⚙️ User Settings
+# ⚙️ User Settings
 
-Update profile
+Update account details
 
 Secure logout
 
-Account management
+Account deletion
 
-Permanent account deletion
+Profile management
 
-🏗️ Tech Stack
-🎨 Frontend
+# 🏗️ Tech Stack
+Frontend
 
 Next.js
 
@@ -113,7 +112,7 @@ Tailwind CSS
 
 Modern UI Components
 
-⚙️ Backend
+Backend
 
 Node.js
 
@@ -121,35 +120,42 @@ Express.js
 
 REST API Architecture
 
-🗄️ Database
+Database
 
 MongoDB (or PostgreSQL)
 
-🔑 Authentication
+Authentication
 
 JWT Authentication
 
-OAuth (Google Login)
+Google OAuth Integration
 
-⚡ Installation Guide
-1️⃣ Clone Repository
+# ⚡ Installation
+# 1️⃣ Clone Repository
+```bash
 git clone https://github.com/your-username/DevPulse.git
 cd DevPulse
-2️⃣ Install Dependencies
+```
+# 2️⃣ Install Dependencies
+
 Frontend
+```bash
 cd frontend
 npm install
+```
 Backend
+```bash
 cd backend
 npm install
-3️⃣ Environment Variables
+```
+# 3️⃣ Environment Variables
 
-Create .env inside backend folder:
+Create a .env file inside the backend folder.
 
 PORT=5000
-MONGO_URI=mongodb
+MONGO_URI=mongodb_connection_string
 JWT_SECRET=your_secret_key
-NODE_ENV=dev
+NODE_ENV=development
 
 JUDGE0_URL=https://ce.judge0.com/submissions?base64_encoded=false&wait=true
 
@@ -157,83 +163,88 @@ CLIENT_URL=http://localhost:3000
 
 GOOGLE_CALLBACK_URL=http://localhost:5000/auth/google/callback
 GOOGLE_CLIENT_ID=your_ID
-GOOGLE_CLIENT_SECRET=your_Secret
+GOOGLE_CLIENT_SECRET=your_secret
 
 EMAIL_USER=email
-EMAIL_PASS=your_pass
-▶️ Run Application
+EMAIL_PASS=password
+# ▶️ Run the Application
 
 Start Backend:
-
-npm run dev
-
+```bash
+nodemon
+```
 Start Frontend:
-
+```bash
 npm run dev
-🌍 App URLs
+```
+# 🌍 Application URLs
+Service	URL
+Frontend	http://localhost:3000
 
-Frontend → http://localhost:3000
+Backend	http://localhost:5000
 
-Backend → http://localhost:5000
+# 🧩 Core Modules
 
-🧩 Core Modules
+Authentication System
 
-🔐 Authentication System
+Code Editor Module
 
-💻 Code Editor Engine
+Submission Engine
 
-📤 Submission Processor
+Leaderboard System
 
-🏆 Leaderboard System
+Analytics Dashboard
 
-📊 Analytics Dashboard
+User Management
 
-👤 User Management
-
-🔒 Security Features
+# 🔒 Security Features
 
 Protected API routes
 
 Token-based authentication
 
-Password hashing
+Secure password hashing
 
 Authorized resource access
 
-Secure environment configuration
+Environment variable protection
 
-🚀 Future Improvements
+# 🚀 Future Improvements
 
-🧠 AI-based code analysis
+AI-based code analysis
 
-🧪 Secure execution sandbox
+Secure execution sandbox
 
-👥 Team collaboration
+Coding challenges platform
 
-🏁 Coding challenges system
+Team collaboration
 
-⚡ Real-time collaborative editor
+Real-time collaborative editor
 
-📈 Advanced analytics
+Advanced analytics system
 
-🤝 Contributing
+ #🤝 Contributing
 
-We welcome contributions!
+Contributions are welcome!
 
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Open a Pull Request
-⭐ Support the Project
+Fork the repository
 
-If you like DevPulse, consider:
+Create a feature branch
 
-⭐ Starring the repository
-🍴 Forking the project
-🧑‍💻 Contributing features
+Commit your changes
 
-👨‍💻 Author
+Submit a Pull Request
+
+# ⭐ Support
+
+If you like this project:
+
+# ⭐ Star the repository
+# 🍴 Fork the project
+# 🚀 Share with developers
+
+# 👨‍💻 Author
 
 Rahul
 
-Building tools for developers 🚀
+Building modern tools for developers 🚀
