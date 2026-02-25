@@ -9,6 +9,7 @@ type HomeClientProps = {
 
 export default function HomeClient({ token }: HomeClientProps) {
   const router = useRouter();
+  console.log(token);
 
   return (
     <div className="min-h-screen bg-white text-gray-900 overflow-x-hidden">
