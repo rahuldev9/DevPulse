@@ -122,7 +122,7 @@ REST API Architecture
 
 Database
 
-MongoDB (or PostgreSQL)
+MongoDB 
 
 Authentication
 
@@ -131,6 +131,7 @@ JWT Authentication
 Google OAuth Integration
 
 # ⚡ Installation
+
 # 1️⃣ Clone Repository
 ```bash
 git clone https://github.com/your-username/DevPulse.git
