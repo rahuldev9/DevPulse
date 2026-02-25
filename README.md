@@ -1,165 +1,194 @@
-🚀 DevPulse
+🚀 DevPulse — Developer Activity & Coding Platform
 
-DevPulse is a full-stack developer platform built with Next.js and Node.js that allows users to write, manage, submit, and analyze code across multiple programming languages.
-It provides authentication, code storage, submission tracking, analytics, and a competitive leaderboard system.
+DevPulse is a full-stack developer platform built using Next.js and Node.js that allows developers to write, manage, submit, and analyze code across multiple programming languages.
+
+It combines coding practice, analytics, and competition into a single modern dashboard experience.
+
+🌐 Live Concept
+
+Practice coding • Track performance • Compete globally • Improve consistently
 
 📌 Overview
 
-DevPulse is designed to help developers practice coding, track their activity, and monitor performance through detailed analytics and dashboards.
+DevPulse helps developers monitor their coding journey through:
 
-After authentication, users can write code in multiple languages, save projects, submit solutions, and compete with others through a leaderboard based on submission activity.
+✅ Secure authentication
+✅ Online multi-language code editor
+✅ Submission tracking
+✅ Performance analytics
+✅ Competitive leaderboard
 
-✨ Features
+After logging in, users can write code, save projects, submit solutions, and climb the leaderboard based on activity.
+
+✨ Core Features
 🔐 Authentication & Authorization
 
-Secure user registration and login
+Secure user registration & login
 
-Protected routes using authentication middleware
+JWT / Session-based authentication
+
+Protected routes
 
 Role-based authorization
 
-Session/token management
+Account management
 
-Account management options
+Secure session handling
 
-💻 Code Editor
+💻 Online Code Editor
 
-Write code directly in the browser
+Browser-based coding environment
 
-Supported languages:
+Multiple language support:
 
-Python
+🐍 Python
+☕ Java
+⚡ C++
+🟨 JavaScript
 
-Java
+Features:
 
-C++
+Save snippets
 
-JavaScript
-
-Save code snippets
-
-Edit existing code
+Edit projects
 
 Delete saved code
 
-Persistent storage for user projects
+Persistent cloud storage
 
 📤 Code Submission System
 
-Submit coding solutions
+Submit coding solutions instantly
 
-Track submission history
+Automatic submission tracking
 
-Store submission records
+Submission history
 
-Automatic submission counting
+Stored execution records
 
-🏆 Leaderboard
+Activity-based metrics
 
-Ranked based on highest number of submissions
+🏆 Competitive Leaderboard
+
+Ranked by total submissions
 
 Real-time ranking updates
 
-Competitive coding environment
+Competitive developer ecosystem
+
+Motivation-driven coding
 
 📊 Dashboard & Analytics
 
-User activity overview
+Interactive developer insights:
 
 Total submissions
 
-Saved codes statistics
+Saved projects stats
 
-Coding performance insights
+Coding activity tracking
 
-Submission analysis
+Performance analytics
+
+Submission trends
 
 ⚙️ User Settings
 
-Update account settings
+Update profile
 
-Logout functionality
+Secure logout
 
-Delete account permanently
+Account management
+
+Permanent account deletion
 
 🏗️ Tech Stack
-Frontend
+🎨 Frontend
 
 Next.js
 
 React
 
-Tailwind CSS (or your styling framework)
+Tailwind CSS
 
 Modern UI Components
 
-Backend
+⚙️ Backend
 
 Node.js
 
 Express.js
 
-REST APIs
+REST API Architecture
 
-Database
+🗄️ Database
 
-MongoDB / PostgreSQL (update based on your project)
+MongoDB (or PostgreSQL)
 
-Authentication
+🔑 Authentication
 
-JWT / Session-based Authentication
+JWT Authentication
 
-⚡ Installation
+OAuth (Google Login)
 
-1. Clone the Repository
-   git clone https://github.com/your-username/DevPulse.git
-   cd devpulse
-2. Install Dependencies
-   Frontend
-   cd frontend
-   npm install
-   Backend
-   cd backend
-   npm install
-3. Environment Variables
+⚡ Installation Guide
+1️⃣ Clone Repository
+git clone https://github.com/your-username/DevPulse.git
+cd DevPulse
+2️⃣ Install Dependencies
+Frontend
+cd frontend
+npm install
+Backend
+cd backend
+npm install
+3️⃣ Environment Variables
 
-Create a .env file in the server folder:
+Create .env inside backend folder:
 
 PORT=5000
 MONGO_URI=mongodb
 JWT_SECRET=your_secret_key
 NODE_ENV=dev
+
 JUDGE0_URL=https://ce.judge0.com/submissions?base64_encoded=false&wait=true
+
 CLIENT_URL=http://localhost:3000
+
 GOOGLE_CALLBACK_URL=http://localhost:5000/auth/google/callback
-EMAIL_USER=email
-EMAIL_PASS=your_pass
 GOOGLE_CLIENT_ID=your_ID
 GOOGLE_CLIENT_SECRET=your_Secret
 
-Start Backend
+EMAIL_USER=email
+EMAIL_PASS=your_pass
+▶️ Run Application
+
+Start Backend:
+
 npm run dev
-Start Frontend
+
+Start Frontend:
+
 npm run dev
+🌍 App URLs
 
-App will run on:
+Frontend → http://localhost:3000
 
-Frontend: http://localhost:3000
-Backend: http://localhost:5000
+Backend → http://localhost:5000
 
-📊 Core Modules
+🧩 Core Modules
 
-Authentication System
+🔐 Authentication System
 
-Code Editor Module
+💻 Code Editor Engine
 
-Submission Engine
+📤 Submission Processor
 
-Leaderboard System
+🏆 Leaderboard System
 
-Analytics Dashboard
+📊 Analytics Dashboard
 
-User Management
+👤 User Management
 
 🔒 Security Features
 
@@ -167,34 +196,44 @@ Protected API routes
 
 Token-based authentication
 
-Secure password handling
+Password hashing
 
 Authorized resource access
 
+Secure environment configuration
+
 🚀 Future Improvements
 
-Code execution sandbox
+🧠 AI-based code analysis
 
-AI-based code analysis
+🧪 Secure execution sandbox
 
-Team collaboration
+👥 Team collaboration
 
-Coding challenges
+🏁 Coding challenges system
 
-Real-time collaboration editor
+⚡ Real-time collaborative editor
+
+📈 Advanced analytics
 
 🤝 Contributing
 
-Contributions are welcome!
+We welcome contributions!
 
-Fork the repository
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Open a Pull Request
+⭐ Support the Project
 
-Create a feature branch
+If you like DevPulse, consider:
 
-Commit changes
-
-Submit a Pull Request
+⭐ Starring the repository
+🍴 Forking the project
+🧑‍💻 Contributing features
 
 👨‍💻 Author
 
-Developed by Rahul
+Rahul
+
+Building tools for developers 🚀
